@@ -12,7 +12,7 @@ const bookSchema = new mongoose.Schema({
     },
     summary: {
         type: String,
-        required: false
+        required: true
     }
 });
 
