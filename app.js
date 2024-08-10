@@ -13,11 +13,13 @@ app.get('/',(req,res)=>{
 //app.listen(3000);
 
 //routers 
+const authRouter = require('./routes/auth')
 const booksrouter = require('./routes/cru')
 
+app.use('/api/v1/auth',authRouter)
 app.use('/api/v1/books',booksrouter)
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 8000;
 
 const start = async() => {
     try{
